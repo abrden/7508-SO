@@ -1,0 +1,3 @@
+Che 08/12/1994 aca hay un 09/20/1959 par de fechas
+en formato mm/dd/aaaa, como 01/04/1958. Por favor 
+pasalas a formato dd/mm/aaaa 08/16/1929 :)
