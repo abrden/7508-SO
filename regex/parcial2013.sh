@@ -4,10 +4,6 @@ PARAMS=$(grep ".*")
 COD_LOCALIDAD=$(echo $PARAMS | sed 's#^\(.*\) .*#\1#')
 NRO_ORDEN=$(echo $PARAMS | sed 's#.* \(.*\)#\1#')
 
-echo $COD_LOCALIDAD
-echo $NRO_ORDEN
+# Obligatory " en grep y sed para que reemplace las variables en la regex
 
-filt=$(grep -E "^$COD_LOCALIDAD:.*:.*:.*:$NRO_ORDEN:.*" Eleccion.Result)
-echo "$filt"
-res=$(echo $filt | sed 's#^$COD_LOCALIDAD:.*:.*:.*:$NRO_ORDEN:\(.*\):.*:\(.*\)#\2-\1#')
-echo $res
+grep -E "^$COD_LOCALIDAD:.*:.*:.*:$NRO_ORDEN:.*" Eleccion.Result | sed "s@^$COD_LOCALIDAD:.*:.*:.*:$NRO_ORDEN:\(.*\):.*:\(.*\)@\2-\1@"
