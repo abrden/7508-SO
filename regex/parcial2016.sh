@@ -8,4 +8,6 @@
 PADRON=$(grep ".*")
 echo "Consulta sobre el padron $PADRON"
 
-grep '.*;$PADRON;.*;.*;A[+|-]\?' notas.txt && echo "$PADRON esta aprobado" || echo "$PADRON esta desaprobado"
+grep -E ".*;$PADRON;.*;.*;A[+-]?" notas.txt && echo "$PADRON esta aprobado" || echo "$PADRON esta desaprobado"
+
+

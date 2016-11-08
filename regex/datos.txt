@@ -1,0 +1,8 @@
+1:Juan Perez:9.321
+5:Julian Pazos:7.98
+2:Juan Paso:3.321
+3:Matias Perez:7.534
+7:Melina Molina:2.345
+8:Daiana Arroz:0.8
+6:Juan Perez:1000.534
+4:Fernando Poso:7.999
